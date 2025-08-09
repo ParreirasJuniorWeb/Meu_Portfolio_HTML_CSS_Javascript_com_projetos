@@ -5,14 +5,14 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 console.log("Servidor rodando!!!");
 
 // Configuração do CORS para permitir requisições do seu frontend
 app.use(
   cors({
-    origin: "http://127.0.0.1:5501", // URL do seu servidor de desenvolvimento
+    origin: "https://meu-portfolio-html-css-javascript-com.onrender.com/", // URL do seu servidor de desenvolvimento
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
