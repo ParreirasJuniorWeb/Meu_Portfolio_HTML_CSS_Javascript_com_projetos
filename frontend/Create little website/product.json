@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Product Name 1",
+        "price": 50,
+        "img": "/img/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg",
+        "description": "Bolsa feminina"
+    },
+    {
+        "id": 2,
+        "name": "Product Name 2",
+        "price": 30,
+        "img": "/img/busy-woman-working-night-front-computer-taking-notes-writing-notebook-annual-reports-checking-financial-project-focused-employee-using-technology-network-wireless-doing-overtime-job.jpg",
+        "description": "Bolsa feminina"
+    },
+    {
+        "id": 3,
+        "name": "Product Name 3",
+        "price": 20,
+        "img": "/img/computer-4795762_1280.jpg",
+        "description": "Bolsa feminina"
+    },
+    {
+        "id": 4,
+        "name": "Product Name 4",
+        "price": 90,
+        "img": "/img/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg",
+        "description": "Bolsa feminina"
+    },
+    {
+        "id": 5,
+        "name": "Product Name 5",
+        "price": 100,
+        "img": "/img/side-view-smiley-woman-working-with-laptop-office.jpg",
+        "description": "Bolsa feminina"
+    },
+    {
+        "id": 6,
+        "name": "Product Name 6",
+        "price": 250,
+        "img": "/img/bx-send.svg",
+        "description": "Bolsa feminina"
+    }
+]

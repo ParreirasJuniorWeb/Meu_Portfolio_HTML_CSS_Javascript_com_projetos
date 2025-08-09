@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --text-color: #333;
+    --light-text-color: #fff;
+    --background-color: #f4f4f4;
+    --container-width: 1200px;
+    --spacing: 20px;
+    --font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.button.primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.button.secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.button.secondary:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+/* Header */
+.main-header {
+    background-color: var(--light-text-color);
+    padding: var(--spacing) 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 10px var(--spacing);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon i {
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    /* Oculto por padrão em telas maiores */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/banner-3.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero .container {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: var(--spacing);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 2 * var(--spacing);
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 50px 0;
+    background-color: var(--background-color);
+}
+
+.featured-products h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2 * var(--spacing);
+    color: var(--primary-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2 * var(--spacing);
+}
+
+.product-card {
+    background-color: var(--light-text-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: var(--spacing);
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.product-card h3 {
+    padding: var(--spacing);
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 0 var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.product-card .button.secondary {
+    margin: 0 var(--spacing);
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 2em;
+    margin-bottom: var(--spacing);
+    color: var(--primary-color);
+}
+
+.call-to-action p {
+    font-size: 1.1em;
+    margin-bottom: 2 * var(--spacing);
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.newsletter-form button:hover {
+    background-color: #e55a5a;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: var(--light-text-color);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav ul li a {
+    display: block;
+    padding: 5px var(--spacing);
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: var(--spacing);
+    }
+
+    .main-nav {
+        width: 100%;
+        display: none;
+        /* Oculta o menu em telas menores por padrão */
+        margin-top: var(--spacing);
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        border-top: 1px solid #ddd;
+    }
+
+    .main-nav ul li a {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Exibe o botão do menu em telas menores */
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        border-radius: 5px;
+        margin-bottom: var(--spacing);
+    }
+
+    .newsletter-form button {
+        border-radius: 5px;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        margin-top: var(--spacing);
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav ul li a {
+        padding: 5px 0;
+    }
+}
+
+/* Estilos Adicionais para Design Chamativo (Sugestões) */
+
+/* Animações Sutis */
+.product-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.button.primary, .button.secondary {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cores Vibrantes e Contraste /
+/ As cores primária e secundária já são vibrantes. Certifique-se de ter um bom contraste entre texto e fundo. */
+
+/* Tipografia Atraente /
+/ A fonte 'Segoe UI' é legível e moderna. Você pode experimentar outras fontes do Google Fonts para um visual único. /
+/ Exemplo:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+--font-family: 'Montserrat', sans-serif;
+}
+*/
+
+/* Espaçamento e Hierarquia Visual /
+/ O espaçamento (var(--spacing)) ajuda a criar respiro entre os elementos. Use tamanhos de fonte diferentes para criar hierarquia. */
+
+/* Imagens de Alta Qualidade /
+/ Use sempre imagens nítidas e relevantes para os seus produtos. */

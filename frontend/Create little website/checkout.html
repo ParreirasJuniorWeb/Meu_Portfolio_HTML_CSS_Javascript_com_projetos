@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .products {
+            padding: 70px 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <div class="container">
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo"><img src="/img/logotipo-gratis-1.png" alt="Logomarca"></a>
+
+            <ul class="nav_items">
+                <li class="nav_item_li">
+                    <a href="index.html" class="nav_link">Home</a>
+                    <a href="products.html" class="nav_link">Products</a>
+                    <a href="services.html" class="nav_link">Services</a>
+                    <a href="About.html" class="nav_link">About</a>
+                    <a href="index.html" class="nav_link">Contact</a>
+                </li>
+            </ul>
+
+            <a href="login_signupPag.html" class="button" id="form-open">Login</a>
+            <!-- <button class="button" id="form-signup">registre-se</button> -->
+        </nav>
+    </header>
+
+    <!--Container Products-->
+    <main>
+    <div class="products">
+        <!---CheckOut Products--->
+
+        <div class="progress-bar">
+                <div class="stage">
+                    <p class="tool-tip">Checkout</p>
+                    <p class="stageno stageno-1">1</p>
+                </div>
+                <div class="stage">
+                    <p class="tool-tip">Calcular Frete R$</p>
+                    <p class="stageno stageno-2">2</p>
+                </div>
+                <div class="stage">
+                    <p class="tool-tip">Formas de Pagamento</p>
+                    <p class="stageno stageno-3">3</p>
+                </div>
+                </div>
+         <div class="stage1-content">              
+        <div class="checkoutLayout">
+            <div class="returnCart">
+                <a href="/products.html"><i class='bx bxs-cart-add iconReturnShop'></i>Keep shopping</a>
+                <h1>List Product In Cart</h1>
+                <div class="list">
+                    <div class="item">
+                        <img src="/img/briefcase-161032_1280.png" alt="">
+                        <div class="info">
+                            <div class="name">Product 1</div>
+                            <div class="price">$50/1 product</div>
+                        </div>
+                        <div class="quantity">1</div>
+                        <div class="returnPrice">$50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <h1>CHECKOUT</h1>
+                <div class="form">
+                    <div class="group">
+                        <label for="fname">Full Name</label>
+                        <input type="text" name="fname" id="fname">
+                    </div>
+                    <div class="group">
+                        <label for="Phone">Phone Number</label>
+                        <input type="text" name="Phone" id="Phone">
+                    </div>
+                    <div class="group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                    </div>
+                    <div class="group">
+                        <label for="county">County</label>
+                        <select name="county" id="county">
+                            <option value="">Choose...</option>
+                            <option value="Brasil">Brasil</option>
+                        </select>
+                    </div>
+                    <div class="group">
+                        <label for="city">City</label>
+                        <select name="city" id="city">
+                            <option value="">Choose...</option>
+                            <option value="BH">BH</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="return">
+                    <div class="row">
+                        <div>Total Quantity</div>
+                        <div class="totalQuantity">50</div>
+                    </div>
+                    <div class="row">
+                        <div>Total Price</div>
+                        <div class="totalPrice">$50</div>
+                    </div>
+                </div>
+
+                <button class="buttonCheckout stagebtn1b" onclick="stage1to2()">
+                    CHECKOUT
+                </button>
+            </div>
+        </div>
+        </div>
+
+        <div class="stage2-content">
+            <div id="container">
+                <div id="calculator">
+                    <h2>Calculadora de Frete R$</h2>
+        
+                    <div id="input_box">
+                        <div class="input-field">
+                            <label for="valueCEP">Informe o seu CEP:</label>
+                            <input type="text" id="valueCEP">
+                        </div>
+                        <div class="input-field">
+                            <label for="endereço">Informe seu Endereço completo (opcional):</label>
+                            <input type="text" id="endereço">
+                        </div>
+                    </div>
+        
+                    <div id="result">
+                        <h4>Frete - R$ por quilometragem/ tempo de espera</h4>
+                        <span id="total">R$ 0,00</span>
+                        <p id="duration">02:30:00</p>
+                        
+                        <h3 style="flex-grow: 0">Request</h3>
+                        <pre style="flex-grow: 1" id="request"></pre>
+                        <h3 style="flex-grow: 0">Response</h3>
+                        <pre style="flex-grow: 1" id="response"></pre>
+                    </div>
+        
+                    <button id="calculate">Calcular</button>
+                </div>
+            </div>
+
+            <div class="pagination-btns">
+                <input type="button" value="Previous" class="previousPage stagebtn2a" onclick="stage2to1()">
+                <input type="button" value="Next" class="nextPage stagebtn2b" onclick="stage2to3()">
+            </div>
+        </div>
+
+        <div class="stage3-content">
+            <div class="formasPagamento-container">
+                <h2>Métodos de Pagamento</h2>
+                <div class="form-pag">
+                <div id="pix">
+                    <img src="/img/marca-pix-1-.webp" alt="PIX">
+                </div>
+                <div id="pagamentoAPrazo">
+                    <p>Pagamento a Prazo</p>
+                    <i class='bx bx-calendar-week'></i>
+                    <i class='bx bx-dollar'></i>
+                    <!-- <img src="" alt="Pague A Prazo"> -->
+                </div>
+                <div id="cartao">
+                    <img src="/img/bandeiras-cartoes-de-credito-1536x1086.jpg" alt="Cartao">
+                </div>
+                <div id="boleto">
+                    <img src="/img/boleto-logo-1.png" alt="Boleto">
+                </div>
+                <div id="payPal">
+                    <img src="/img/OIP_logo_PayPal.jpeg" alt="PayPal">
+                </div>
+            <div id="TEF">
+                <img src="/img/R_sistemaDeTEF.jpeg" alt="TEF">
+            </div>
+        </div>
+    </div>
+            <div class="pagination-btns">
+                <input type="button" value="Previous" class="previousPage stagebtn3a" onclick="stage3to2()">
+                <input type="submit" value="Confirmar Forma de Pagamento" class="nextPage stagebtn3b">
+            </div>
+        </div>
+
+    </div>
+</div>
+</main>
+<footer>
+    <div class="rodape">
+        <div class="layoutFooter">
+        <div class="rodapeHeader">
+            <h1>Nome da Empresa</h1>
+            <p>Descrição: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nulla sint quis quas explicabo at dolore quae aperiam doloribus cum quaerat modi, expedita alias architecto dolorem itaque culpa possimus. Qui.</p>
+            <div class="rodapeMidiaSocial">
+                <h2>Nossas mídias sociais</h2>
+                <div class="icons-midia-social">
+                    <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                    <a href=""><i class='bx bxl-pinterest'></i></a>
+                    <a href=""><i class='bx bxl-twitter'></i></a>
+                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                    <a href=""><i class='bx bxl-youtube'></i></a>
+                    <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="Footer-content-column">
+            <div class="Footer-content">
+                <h3>Descobrir</h3>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+            </div>
+            <div class="Footer-content">
+                <h3>Comunidade</h3>
+                <p><a href="">Blog</a></p>
+                <p><a href="">Fórum</a></p>
+                <p><a href="">criadores</a></p>
+                <p><a href="">Câmeras</a></p>
+            </div>
+            <div class="Footer-content">
+                <h3>Sobre Nós</h3>
+                <p><a href="">Sobre Nós</a></p>
+                <p><a href="">FAQ</a></p>
+                <p><a href="">Resumo da licença</a></p>
+                <p><a href="">Termos de Serviço</a></p>
+                <p><a href="">Política de Privacidade</a></p>
+                <p><a href="">Política de cookies</a></p>
+                <p><a href="">API</a></p>
+            </div>
+        </div>
+        <div class="allRightsReseved">
+            <p>This site is protected by reCAPTCHA and the Google Policy and Terms of Service apply.</p>
+            <p><i class='bx bx-copyright'></i>All Rights Reseved 2023</p>
+        </div>
+    </div>
+</footer>
+<script src="checkout.js"></script>
+<script src="ShoppingCart.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart com JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container">
+            <header class="main-header">
+                <h1>Shopping</h1>
+                <div class="shopping" id="open-shopping-cart">
+                    <i class='bx bx-cart'></i>
+                    <span class="quantity" id="cart-quantity">0</span>
+                </div>
+            </header>
+            <div class="list" id="product-list">
+            </div>
+        </div>
+    </div>
+
+    <div class="shopping-cart" id="shopping-cart">
+        <h1 class="cart-title">Carrinho de Compras</h1>
+        <ul class="listCard" id="cart-items-list"></ul>
+        <div class="checkout">
+            <div class="total" id="total-price">R$ 0,00</div>
+            <div class="closeShopping" id="close-shopping-cart">Fechar</div>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>

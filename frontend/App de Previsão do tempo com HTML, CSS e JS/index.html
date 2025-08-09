@@ -1,0 +1,33 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de Previsão do tempo com HTML, CSS e JavaScript</title>
+    <link rel="stylesheet" href="assest/CSS/style.css" />
+  </head>
+  <body>
+    <div class="box-divTempo">
+      <input class="input-cidade" placeholder="Digite o nome da cidade" />
+      <button class="btn-buscar" onclick="clickButton()" accesskey="Enter">
+        <img class="img-buscar" src="assests/img/find.svg" />
+      </button>
+
+      <div id="ConteudoDinamicoJS">
+        <h2 class="cidade">Tempo em São Paulo</h2>
+
+        <p class="temp">21°C</p>
+
+        <div class="box-divTempoMenor">
+          <img class="img-previsao" alt="icone-info-tempo-Nuvem" src="assests/img/04n.png" />
+          <p class="texto-previsao">Nublado</p>
+        </div>
+
+        <p class="umidade">Umidade: 70%</p>
+      </div>
+    </div>
+    <script src="assests/js/script.js"></script>
+  </body>
+</html>

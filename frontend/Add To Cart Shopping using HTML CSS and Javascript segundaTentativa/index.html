@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">Loja Fictícia</h1>
+        <button class="cart-icon" id="cart-icon">
+            <i class='bx bx-shopping-bag'></i>
+            <span class="cart-quantity" id="cart-quantity">0</span>
+        </button>
+    </header>
+
+    <main class="products-container" id="products-container">
+    </main>
+
+    <aside class="shopping-cart-container" id="shopping-cart-container">
+        <h2 class="shopping-cart-title">Carrinho de Compras</h2>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <div class="cart-total-info">
+            <h3 class="cart-total-title">Total:</h3>
+            <span class="cart-total-price" id="cart-total-price">R$ 0.00</span>
+        </div>
+        <button class="btn btn-checkout">Finalizar Compra</button>
+        <button class="btn btn-close-cart" id="close-cart">Fechar Carrinho</button>
+    </aside>
+
+    <script src="shoppingCart.js"></script>
+</body>
+
+</html>

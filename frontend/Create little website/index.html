@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Website with Login & Registration Form in HTML CSS & JavaScrip</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!---Header-->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo"><img src="img/logotipo-gratis-1.png" alt="Logomarca"></a>
+            <ul class="nav_items">
+                <li class="nav_item_li">
+                    <a href="index.html" class="nav_link">Home</a>
+                    <a href="products.html" class="nav_link">Products</a>
+                    <a href="services.html" class="nav_link">Services</a>
+                    <a href="About.html" class="nav_link">About</a>
+                    <a href="index.html" class="nav_link">Contact</a>
+                </li>
+            </ul>
+
+            <button class="button" id="form-open">Login</button>
+            <!-- <button class="button" id="form-signup">registre-se</button> -->
+        </nav>
+    </header>
+
+    <!--Home-->
+    <main>
+        <section class="home">
+            <div class="form_container">
+                <i class='bx bx-x form_close'></i>
+                <!--Login Form-->
+                <div class="form login_form">
+                    <form action="">
+                        <h2>Login</h2>
+
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your e-mail">
+                            <i class='bx bx-envelope email'></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Enter password">
+                            <i class='bx bx-lock password'></i>
+                            <i class='bx bx-low-vision pw_hide'></i>
+                        </div>
+
+                        <div class="option_field">
+                            <span class="checkbox">
+                                <input type="checkbox" name="" id="check">
+                                <label for="check">Remember me</label>
+                            </span>
+                            <a href="" class="forgot_pw">Forgot password?</a>
+                        </div>
+
+                        <button class="button">Login Now</button>
+
+                        <div class="login_signup">
+                            Don't have an account? <a href="" id="signup">Signup</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Signup Form-->
+                <div class="form signup_form">
+                    <i class='bx bx-x form_close' id="form_close_register"></i>
+                    <form action="">
+                        <h2>Signup</h2>
+
+                        <div class="input_box">
+                            <input type="email" placeholder="Enter your e-mail" required>
+                            <i class='bx bx-envelope email'></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Create a password" required>
+                            <i class='bx bx-lock password'></i>
+                            <i class='bx bx-low-vision pw_hide'></i>
+                        </div>
+
+                        <div class="input_box">
+                            <input type="password" placeholder="Confirm password" required>
+                            <i class='bx bx-lock password'></i>
+                            <i class='bx bx-low-vision pw_hide'></i>
+                        </div>
+
+                        <button class="button">Signup Now</button>
+
+                        <div class="login_signup">
+                            Already have an account? <a href="" id="login">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="apresentacao">
+            <div class="content-aprensentacao">
+                <div class="title">
+                    <h1>Bem Vindos a CodeLife!</h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam ad quo dicta sint aspernatur
+                    repellendus! Dolor quibusdam minus quaerat, temporibus aut autem odio officia incidunt ipsum ullam
+                    quam atque.
+                </p>
+                <button class="button">Conheçamos</button>
+            </div>
+            <div class="img">
+                <img src="img/computer-4795762_1280.jpg" alt="img1">
+            </div>
+        </div>
+
+        <section class="products">
+            <div class="headerProducts">
+                <h1>Products<i class='bx bxs-shopping-bag-alt'></i></h1>
+                <input type="search" name="" id="search">
+                <button class="btnSearch"><i class='bx bx-search icon-search'></i></button>
+                <i class='bx bx-cart'></i><span class="quantity">0</span>
+            </div>
+            <div class="categorias">
+                <ul>
+                    <li>Categorias<i class='bx bx-chevron-right-circle' style='color:#7d2ae8'></i></li>
+                    <ul>
+                        <li>Cabos Coaxiais</li>
+                        <li>HDs/SSDs</li>
+                        <li>Memória RAM</li>
+                        <li>Processadores</li>
+                        <li>Computadores</li>
+                        <ul>
+                            <li>Notebooks</li>
+                            <li>PCs</li>
+                            <li>Equipamentos Periféricos</li>
+                            <li>Tablets</li>
+                            <li>SmartPhones</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </div>
+            <div class="catalogo">
+                <div class="containerProducts">
+                    <div class="items_list">
+                        <div class="item">
+                            <img src="img/computer-4795762_1280.jpg" alt="Hamburguer">
+                            <h2>Nome do produto</h2>
+                            <p>Preço R$ 50,00</p>
+                            <span>quantidade</span><input type="number" name="" id="quantity" minlength="0">
+                            <button>Adicionar ao carrinho</button>
+                        </div>
+                        <div class="item">
+                            <img src="img/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg"
+                                alt="Hamburguer">
+                            <h2>Nome do produto</h2>
+                            <p>Preço R$ 50,00</p>
+                            <span>quantidade</span><input type="number" name="" id="quantity" minlength="0">
+                            <button>Adicionar ao carrinho</button>
+                        </div>
+                        <div class="item">
+                            <img src="img/busy-woman-working-night-front-computer-taking-notes-writing-notebook-annual-reports-checking-financial-project-focused-employee-using-technology-network-wireless-doing-overtime-job.jpg"
+                                alt="Hamburguer">
+                            <h2>Nome do produto</h2>
+                            <p>Preço R$ 50,00</p>
+                            <span>quantidade</span><input type="number" name="" id="quantity" minlength="0">
+                            <button>Adicionar ao carrinho</button>
+                        </div>
+                        <div class="item">
+                            <img src="img/side-view-smiley-woman-working-with-laptop-office.jpg" alt="Hamburguer">
+                            <h2>Nome do produto</h2>
+                            <p>Preço R$ 50,00</p>
+                            <span>quantidade</span><input type="number" name="" id="quantity" minlength="0">
+                            <button>Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="containerServices">
+                <div class="headerServices">
+                    <h2>Services</h2>
+                    <p>Venha conhecer nossos serviços!</p>
+                </div>
+
+                <div class="blockServices">
+                    <div id="Service-1">
+                        <img src="img/computer-1836330_1280.png" alt="img_service1">
+                        <h2>Name Service 1</h2>
+                        <p class="price">R$ 50,00</p>
+                        <span>Description</span>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi omnis nobis minus
+                            temporibus porro alias optio cupiditate, placeat doloribus facilis totam enim nesciunt
+                            blanditiis veniam cum beatae reiciendis dolorum.</p>
+                    </div>
+                    <button class="serv-contratar">Contratar</button>
+
+                    <div id="Service-2">
+                        <img src="img/computer-4795762_1280.jpg" alt="img_service2">
+                        <h2>Name Service 2</h2>
+                        <p class="price">R$ 50,00</p>
+                        <p class="destaques">Destaques</p>
+                        <ul class="listaDeDestaques">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit..</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem corrupti nihil sunt totam
+                                facere nisi recusandae neque. Explicabo reiciendis quasi accusamus doloribus,
+                                doloremque, iusto veniam sit amet molestiae fugit officiis?</li>
+                        </ul>
+                    </div>
+                    <button class="serv-contratar">Contratar</button>
+
+                    <div id="Service-3">
+                        <img src="img/busy-woman-working-night-front-computer-taking-notes-writing-notebook-annual-reports-checking-financial-project-focused-employee-using-technology-network-wireless-doing-overtime-job.jpg"
+                            alt="img_service3">
+                        <h2>Name Service 3</h2>
+                        <p class="price">R$ 50,00</p>
+                        <span>Description</span>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi omnis nobis minus
+                            temporibus porro alias optio cupiditate, placeat doloribus facilis totam enim nesciunt
+                            blanditiis veniam cum beatae reiciendis dolorum.</p>
+                    </div>
+                    <button class="serv-contratar">Contratar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="feedback-clientes">
+                <div class="feedbackHeader">
+                    <h2>Opinião dos Clientes<i class='bx bx-comment' style='color:#ffffff'></i></h2>
+                </div>
+                <div class="containerFeedback">
+                    <div class="contentF">
+                        <div class="slides">
+
+                            <input type="radio" name="slide" id="slide1" checked="checked">
+                            <input type="radio" name="slide" id="slide2">
+                            <input type="radio" name="slide" id="slide3">
+                            <input type="radio" name="slide" id="slide4">
+                            <input type="radio" name="slide" id="slide5">
+
+                            <div class="slide s1">
+                                <div class="layoutImg">
+                                    <div class="ladoImg">
+                                        <img src="img/side-view-smiley-woman-working-with-laptop-office.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="layoutText">
+                                    <div class="ladoDescription">
+                                        <i class='bx bx-user-voice icons icon-right1' style="color: #fff;"></i>
+                                        <h3><i class='bx bx-minus' style='color:#ffffff'></i>User Name</h3>
+                                        <p><i class='bx bxs-quote-alt-left icon-enfase' style='color:#ffffff'
+                                                id="enfase-1"></i>Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Esse sit nostrum saepe enim porro magnam, totam officia exercitationem
+                                            impedit accusamus velit deleniti molestiae qui odio incidunt voluptas
+                                            eveniet beatae. Quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Voluptatem quidem saepe ex? Laudantium iste nisi delectus, totam
+                                            earum, voluptates quidem sint quod quos maxime rerum officiis consequuntur
+                                            magnam ea doloremque!<i class='bx bxs-quote-alt-right icon-enfase'
+                                                style='color:#ffffff' id="enfase-2"></i></p>
+                                        <i class='bx bxs-info-circle icons icon-left2' style='color:#ffffff'></i>
+                                        <i class='bx bxs-message-rounded icons icon-left' style='color:#ffffff'></i>
+                                        <i class='bx bx-like icons icon-right2' style='color:#ffffff'></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="slide">
+                                <div class="layoutImg">
+                                    <div class="ladoImg">
+                                        <img
+                                            src="img/busy-woman-working-night-front-computer-taking-notes-writing-notebook-annual-reports-checking-financial-project-focused-employee-using-technology-network-wireless-doing-overtime-job.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="layoutText">
+                                    <div class="ladoDescription">
+                                        <i class='bx bx-user-voice icons icon-right1' style="color: #fff;"></i>
+                                        <h3><i class='bx bx-minus' style='color:#ffffff'></i>User Name</h3>
+                                        <p><i class='bx bxs-quote-alt-left icon-enfase' style='color:#ffffff'
+                                                id="enfase-1"></i>Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Esse sit nostrum saepe enim porro magnam, totam officia exercitationem
+                                            impedit accusamus velit deleniti molestiae qui odio incidunt voluptas
+                                            eveniet beatae. Quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Voluptatem quidem saepe ex? Laudantium iste nisi delectus, totam
+                                            earum, voluptates quidem sint quod quos maxime rerum officiis consequuntur
+                                            magnam ea doloremque!<i class='bx bxs-quote-alt-right icon-enfase'
+                                                style='color:#ffffff' id="enfase-2"></i></p>
+                                        <i class='bx bxs-info-circle icons icon-left2' style='color:#ffffff'></i>
+                                        <i class='bx bxs-message-rounded icons icon-left' style='color:#ffffff'></i>
+                                        <i class='bx bx-like icons icon-right2' style='color:#ffffff'></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="slide">
+                                <div class="layoutImg">
+                                    <div class="ladoImg">
+                                        <img
+                                            src="img/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="layoutText">
+                                    <div class="ladoDescription">
+                                        <i class='bx bx-user-voice icons icon-right1' style="color: #fff;"></i>
+                                        <h3><i class='bx bx-minus' style='color:#ffffff'></i>User Name</h3>
+                                        <p><i class='bx bxs-quote-alt-left icon-enfase' style='color:#ffffff'
+                                                id="enfase-1"></i>Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Esse sit nostrum saepe enim porro magnam, totam officia exercitationem
+                                            impedit accusamus velit deleniti molestiae qui odio incidunt voluptas
+                                            eveniet beatae. Quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Voluptatem quidem saepe ex? Laudantium iste nisi delectus, totam
+                                            earum, voluptates quidem sint quod quos maxime rerum officiis consequuntur
+                                            magnam ea doloremque!<i class='bx bxs-quote-alt-right icon-enfase'
+                                                style='color:#ffffff' id="enfase-2"></i></p>
+                                        <i class='bx bxs-info-circle icons icon-left2' style='color:#ffffff'></i>
+                                        <i class='bx bxs-message-rounded icons icon-left' style='color:#ffffff'></i>
+                                        <i class='bx bx-like icons icon-right2' style='color:#ffffff'></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="slide">
+                                <div class="layoutImg">
+                                    <div class="ladoImg">
+                                        <img src="img/computer-4795762_1280.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="layoutText">
+                                    <div class="ladoDescription">
+                                        <i class='bx bx-user-voice icons icon-right1' style="color: #fff;"></i>
+                                        <h3><i class='bx bx-minus' style='color:#ffffff'></i>User Name</h3>
+                                        <p><i class='bx bxs-quote-alt-left icon-enfase' style='color:#ffffff'
+                                                id="enfase-1"></i>Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Esse sit nostrum saepe enim porro magnam, totam officia exercitationem
+                                            impedit accusamus velit deleniti molestiae qui odio incidunt voluptas
+                                            eveniet beatae. Quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Voluptatem quidem saepe ex? Laudantium iste nisi delectus, totam
+                                            earum, voluptates quidem sint quod quos maxime rerum officiis consequuntur
+                                            magnam ea doloremque!<i class='bx bxs-quote-alt-right icon-enfase'
+                                                style='color:#ffffff' id="enfase-2"></i></p>
+                                        <i class='bx bxs-info-circle icons icon-left2' style='color:#ffffff'></i>
+                                        <i class='bx bxs-message-rounded icons icon-left' style='color:#ffffff'></i>
+                                        <i class='bx bx-like icons icon-right2' style='color:#ffffff'></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="slide">
+                                <div class="layoutImg">
+                                    <div class="ladoImg">
+                                        <img src="img/computer-1836330_1280.png">
+                                    </div>
+                                </div>
+
+                                <div class="layoutText">
+                                    <div class="ladoDescription">
+                                        <i class='bx bx-user-voice icons icon-right1' style="color: #fff;"></i>
+                                        <h3><i class='bx bx-minus' style='color:#ffffff'></i>User Name</h3>
+                                        <p><i class='bx bxs-quote-alt-left icon-enfase' style='color:#ffffff'
+                                                id="enfase-1"></i>Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Esse sit nostrum saepe enim porro magnam, totam officia exercitationem
+                                            impedit accusamus velit deleniti molestiae qui odio incidunt voluptas
+                                            eveniet beatae. Quaerat? Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit. Voluptatem quidem saepe ex? Laudantium iste nisi delectus, totam
+                                            earum, voluptates quidem sint quod quos maxime rerum officiis consequuntur
+                                            magnam ea doloremque!<i class='bx bxs-quote-alt-right icon-enfase'
+                                                style='color:#ffffff' id="enfase-2"></i></p>
+                                        <i class='bx bxs-info-circle icons icon-left2' style='color:#ffffff'></i>
+                                        <i class='bx bxs-message-rounded icons icon-left' style='color:#ffffff'></i>
+                                        <i class='bx bx-like icons icon-right2' style='color:#ffffff'></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="navegation">
+                            <label for="slide1" class="bar"></label>
+                            <label for="slide2" class="bar"></label>
+                            <label for="slide3" class="bar"></label>
+                            <label for="slide4" class="bar"></label>
+                            <label for="slide5" class="bar"></label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="containerAbout">
+                <div class="headerAbout">
+                    <div class="title_logo">
+                        <img src="img/logotipo-gratis-1.png" alt="logo">
+                        <h1>Nome Empresa</h1>
+                    </div>
+                </div>
+                <div class="lados">
+                    <div class="imagemAbout">
+                        <img src="img/side-view-smiley-woman-working-with-laptop-office.jpg" alt="imgAbout">
+                    </div>
+
+                    <div class="AboutEmpresa">
+                        <h2>Sobre a Empresa</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, expedita labore asperiores
+                            reiciendis laboriosam sed omnis recusandae facilis sint obcaecati accusamus ad libero, atque
+                            repudiandae veniam amet molestiae sunt voluptas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum totam,
+                            exercitationem commodi itaque dolorem ipsam explicabo. Molestias eos eius dolor, enim
+                            distinctio odit provident accusantium suscipit facere itaque incidunt!</p>
+                        <h3>Missão</h3>
+                        <p><strong>Misão</strong>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                            eveniet vitae. Praesentium eum sit molestias, voluptates, totam commodi nihil fuga nam autem
+                            nulla odio placeat architecto hic distinctio iure accusamus!</p>
+                        <h3>Visão</h3>
+                        <p><strong>Visão</strong>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+                            cumque. Recusandae odit hic eum, ut, autem earum perspiciatis adipisci amet doloribus sequi
+                            provident? Maiores non itaque dignissimos in quae dolores.</p>
+                        <h3>Valores</h3>
+                        <p><strong id="#valor">Valores</strong></p>
+                        <ul>
+                            <li>Valor1</li>
+                            <li>Valor2</li>
+                            <li>Valor3</li>
+                        </ul>
+                        <button type="button" id="readMore">Read More</button>
+                        <div class="naoLerAgora"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="containerContact">
+                <div class="headerServices contactUs-header">
+                    <h2>Contact us</h2>
+                    <p>Venha conhecer nossos canais de comunicação!</p>
+                </div>
+                <div class="layoutContact">
+                    <div class="form-contact">
+                        <h3>Formulário de Contato</h3>
+                        <form action="" onsubmit="sendEmail()">
+                            <div class="inline-inputs">
+                                <div class="inputs-group">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="fname" placeholder="" onkeyup="validateName()"
+                                        class="contact-name">
+                                    <small id="nameError"></small>
+                                </div>
+
+                                <div class="inputs-group">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lname" placeholder="" onkeyup="validateLName()"
+                                        class="contact-Lname">
+                                    <small id="lastNameError"></small>
+                                </div>
+
+                                <div class="inputs-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" placeholder="" onkeyup="validationEmail()"
+                                        class="contact-email">
+                                    <small id="emailError"></small>
+                                </div>
+
+                                <div class="inputs-group">
+                                    <label for="number">Phone Number</label>
+                                    <input type="text" id="number" placeholder="" onkeyup="validatePhone()"
+                                        class="contact-phone">
+                                    <small id="phoneError"></small>
+                                </div>
+
+                                <div class="inputs-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder=""
+                                        onkeyup="validateSubject()" class="contact-subject">
+                                    <small id="subjectError"></small>
+                                </div>
+                            </div>
+
+                            <div class="colunm-inputs">
+                                <div class="inputs-group">
+                                    <label for="msg">Messagem</label>
+                                    <textarea name="msg" id="msg" cols="30" rows="10" class="contact-confirmMsg"
+                                        onkeyup="validateConfirMsg()"></textarea>
+                                    <small id="msgError"></small>
+                                </div>
+
+                                <button type="submit" id="submitMsg" name="submitMsg" class="btnSubmit"
+                                    onclick="return validadeForm()">Enviar</button>
+                                <small id="submitError">922333444000</small>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="info">
+                        <h2>Nossas Redes Sociais</h2>
+                        <div class="midia-social">
+                            <ul>
+                                <li><a href=""><i class='bx bxl-facebook-circle' style='color:#ffffff'
+                                            id="face"></i></a></li>
+                                <li><a href=""><i class='bx bxl-instagram' style='color:#ffffff' id="insta"></i></a>
+                                </li>
+                                <li><a href=""><i class='bx bxl-linkedin-square' style='color:#ffffff'
+                                            id="link"></i></a></li>
+                                <li><a href=""><i class='bx bxl-github' style='color:#ffffff' id="git"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="dadosEmpresa">
+                            <p><i class='bx bx-map' style='color:#ee07d7'></i>Rua Luiz Benedito Maia, 240 - Centro,
+                                RJ/RJ</p>
+                            <p><i class='bx bx-phone-call' style='color:#ee07d7'></i>(22) 1234 00645</p>
+                            <p><i class='bx bx-envelope' style='color:#ee07d7'></i>emailEmpresa@dominioDaEmpresa.com.br
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="map">
+                        <h2>Google Maps <i class='bx bx-map' style='color:#ee07d7'></i></h2>
+                        <div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.895871691652!2d-43.176238925050434!3d-22.9540616792218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ff81051b73f%3A0x4570cd1fa55b72e7!2sCentro%20Brasileiro%20de%20Pesquisas%20F%C3%ADsicas!5e0!3m2!1spt-BR!2sbr!4v1702506286537!5m2!1spt-BR!2sbr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="rodape">
+            <div class="layoutFooter">
+                <div class="rodapeHeader">
+                    <h1>Nome da Empresa</h1>
+                    <p>Descrição: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nulla sint quis quas
+                        explicabo at dolore quae aperiam doloribus cum quaerat modi, expedita alias architecto dolorem
+                        itaque culpa possimus. Qui.</p>
+                    <div class="rodapeMidiaSocial">
+                        <h2>Nossas mídias sociais</h2>
+                        <div class="icons-midia-social">
+                            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                            <a href=""><i class='bx bxl-instagram'></i></a>
+                            <a href=""><i class='bx bxl-pinterest'></i></a>
+                            <a href=""><i class='bx bxl-twitter'></i></a>
+                            <a href=""><i class='bx bxl-whatsapp'></i></a>
+                            <a href=""><i class='bx bxl-youtube'></i></a>
+                            <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Footer-content-column">
+                <div class="Footer-content">
+                    <h3>Descobrir</h3>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                    <p><a href="">Sobre o serviço da empresa...</a></p>
+                </div>
+                <div class="Footer-content">
+                    <h3>Comunidade</h3>
+                    <p><a href="">Blog</a></p>
+                    <p><a href="">Fórum</a></p>
+                    <p><a href="">criadores</a></p>
+                    <p><a href="">Câmeras</a></p>
+                </div>
+                <div class="Footer-content">
+                    <h3>Sobre Nós</h3>
+                    <p><a href="">Sobre Nós</a></p>
+                    <p><a href="">FAQ</a></p>
+                    <p><a href="">Resumo da licença</a></p>
+                    <p><a href="">Termos de Serviço</a></p>
+                    <p><a href="">Política de Privacidade</a></p>
+                    <p><a href="">Política de cookies</a></p>
+                    <p><a href="">API</a></p>
+                </div>
+            </div>
+            <div class="allRightsReseved">
+                <p>This site is protected by reCAPTCHA and the Google Policy and Terms of Service apply.</p>
+                <p><i class='bx bx-copyright'></i>All Rights Reseved 2023</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        /* Validação de formulários */
+        var nameError = document.getElementById("nameError");
+        var lastNameError = document.getElementById("lastNameError");
+
+        var emailError = document.getElementById("emailError");
+        var phoneError = document.getElementById("phoneError");
+        var passwordError = document.getElementById("subjectError");
+        var confirmPasswordError = document.getElementById("msgError");
+        var submitError = document.getElementById("submitError");
+
+        function validateName() {
+            var name = document.querySelector(".contact-name").value;
+            var nameInput = document.querySelector(".contact-name");
+
+            if (name.length == 0) {
+                nameError.innerHTML = "Name is required  <i class='bx bxs-error-circle error'></i>";
+                nameInput.style.border = "1px solid #e74c3c";
+                nameError.style.color = "#e74c3c";
+
+                return false;
+            }
+            if (name.length <= 7) {
+                nameError.style.position = "absolute";
+                nameError.innerHTML = "Write full name <i class='bx bxs-error-circle error'></i>";
+                nameInput.style.border = "1px solid #e74c3c";
+                nameError.style.color = "#e74c3c";
+
+                return false;
+            }
+            if (name.match(/^[A-Za-z]$/)) {
+                nameError.style.position = "absolute";
+                nameError.innerHTML = "Write full name <i class='bx bxs-error-circle error'></i>";
+                nameInput.style.border = "1px solid #e74c3c";
+                nameError.style.color = "#e74c3c";
+
+                return false;
+            }
+            nameError.style.position = "absolute";
+            nameError.innerHTML = "valid name <i class='bx bxs-check-circle success'></i>";
+            nameInput.style.border = "1px solid #2ecc71";
+            nameError.style.color = "#2ecc71";
+
+            return true;
+        };
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "4fdd7585-937e-45c8-b341-01bac28f4bab",
+                // Host : "smtp.gmail.com",
+                // Username : "username", //Personal email
+                // Password : "password",
+                To: 'joaoparreiras2020@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry" + " => Subject: " + document.getElementById("subject").value,
+                Body: "Full Name: " + document.getElementById("fname").value + " " + document.getElementById("lname").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone Number: " + document.getElementById("number").value
+                    + "<br> Message: " + document.getElementById("msg").value
+            }).then(
+                message => alert('Message Sent Succefully!')
+            );
+        };
+    </script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>

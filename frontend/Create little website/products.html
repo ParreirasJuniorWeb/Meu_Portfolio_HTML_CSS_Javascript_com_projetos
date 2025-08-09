@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Website with Login & Registration Form in HTML CSS & JavaScrip</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Header-->
+    <div class="container">
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo"><img src="/img/logotipo-gratis-1.png" alt="Logomarca"></a>
+
+            <ul class="nav_items">
+                <li class="nav_item_li">
+                    <a href="index.html" class="nav_link">Home</a>
+                    <a href="products.html" class="nav_link">Products</a>
+                    <a href="services.html" class="nav_link">Services</a>
+                    <a href="About.html" class="nav_link">About</a>
+                    <a href="index.html" class="nav_link">Contact</a>
+                </li>
+            </ul>
+
+            <a href="login_signupPag.html" class="button" id="form-open">Login</a>
+            <!-- <button class="button" id="form-signup">registre-se</button> -->
+        </nav>
+    </header>
+
+    <!--Container Products-->
+    <main>
+    <div class="products">
+        <div class="headerProducts">
+            <h1>Products<i class='bx bxs-shopping-bag-alt'></i></h1>
+            <input type="search" name="" id="search">
+            <button class="btnSearch"><i class='bx bx-search icon-search'></i></button>
+            <i class='bx bx-cart'></i><span class="quantity totalQuantity iconCart">0</span>
+        </div>
+        <div class="categorias">
+            <ul>
+                <li>Categorias<i class='bx bx-chevron-right-circle' style='color:#7d2ae8'></i></li>
+                <ul>
+                    <li>Cabos Coaxiais</li>
+                    <li>HDs/SSDs</li>
+                    <li>Memória RAM</li>
+                    <li>Processadores</li>
+                    <li>Computadores</li>
+                    <ul>
+                        <li>Notebooks</li>
+                        <li>PCs</li>
+                        <li>Equipamentos Periféricos</li>
+                        <li>Tablets</li>
+                        <li>SmartPhones</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+        <!--Container Products-->
+        <div class="listProduct">
+            <div class="item">
+                <img src="/img/briefcase-161032_1280.png" alt="Bolsa feminina">
+                <h2>Product Name</h2>
+                <div class="price">$50</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inventário dos produtos da loja on-line -->
+<div class="cart">
+    <h2>SHOPPING CART</h2>
+    <div class="listCart">
+        <div class="item">
+            <img src="/img/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg" alt="Bolsa feminina">
+            <div class="content">
+                <div class="name">
+                    Product Name
+                </div>
+                <div class="price">
+                    $50/1 Product
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">3</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+        <div class="buttons">
+            <div class="close">CLOSE</div>
+            <div class="checkout"><a href="checkout.html">CHECKOUT</a></div>
+        </div>
+</div>
+</main>
+<footer>
+    <div class="rodape">
+        <div class="layoutFooter">
+        <div class="rodapeHeader">
+            <h1>Nome da Empresa</h1>
+            <p>Descrição: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nulla sint quis quas explicabo at dolore quae aperiam doloribus cum quaerat modi, expedita alias architecto dolorem itaque culpa possimus. Qui.</p>
+            <div class="rodapeMidiaSocial">
+                <h2>Nossas mídias sociais</h2>
+                <div class="icons-midia-social">
+                    <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                    <a href=""><i class='bx bxl-pinterest'></i></a>
+                    <a href=""><i class='bx bxl-twitter'></i></a>
+                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                    <a href=""><i class='bx bxl-youtube'></i></a>
+                    <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="Footer-content-column">
+            <div class="Footer-content">
+                <h3>Descobrir</h3>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+                <p><a href="">Sobre o serviço da empresa...</a></p>
+            </div>
+            <div class="Footer-content">
+                <h3>Comunidade</h3>
+                <p><a href="">Blog</a></p>
+                <p><a href="">Fórum</a></p>
+                <p><a href="">criadores</a></p>
+                <p><a href="">Câmeras</a></p>
+            </div>
+            <div class="Footer-content">
+                <h3>Sobre Nós</h3>
+                <p><a href="">Sobre Nós</a></p>
+                <p><a href="">FAQ</a></p>
+                <p><a href="">Resumo da licença</a></p>
+                <p><a href="">Termos de Serviço</a></p>
+                <p><a href="">Política de Privacidade</a></p>
+                <p><a href="">Política de cookies</a></p>
+                <p><a href="">API</a></p>
+            </div>
+        </div>
+        <div class="allRightsReseved">
+            <p>This site is protected by reCAPTCHA and the Google Policy and Terms of Service apply.</p>
+            <p><i class='bx bx-copyright'></i>All Rights Reseved 2023</p>
+        </div>
+    </div>
+</footer>
+
+<script src="ShoppingCart.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

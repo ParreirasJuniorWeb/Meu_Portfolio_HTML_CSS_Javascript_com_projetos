@@ -1,0 +1,286 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/*
+    Estilos Globais e Variáveis CSS
+*/
+:root {
+    --bg-color: #f4f4f4;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --light-text-color: #fff;
+    --border-color: #ddd;
+    --card-bg-color: #fff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/*
+    Estilos do Cabeçalho e Navegação
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--card-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.cart-icon {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.cart-quantity {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+/*
+    Estilos da Seção de Produtos
+*/
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-info p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    color: var(--light-text-color);
+}
+
+.btn-add-to-cart {
+    background-color: var(--primary-color);
+    margin: 1rem;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/*
+    Estilos do Carrinho de Compras (Sidebar)
+*/
+.shopping-cart-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    background-color: var(--card-bg-color);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 200;
+}
+
+.shopping-cart-container.active {
+    transform: translateX(0);
+}
+
+.shopping-cart-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.cart-items {
+    flex-grow: 1;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h4 {
+    font-size: 1rem;
+}
+
+.item-price {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-control button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.quantity-control span {
+    font-weight: bold;
+}
+
+.item-remove {
+    background-color: #dc3545;
+    color: var(--light-text-color);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.item-remove:hover {
+    background-color: #c82333;
+}
+
+.cart-total-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: 2px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+.btn-checkout {
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-checkout:hover {
+    background-color: #0056b3;
+}
+
+.btn-close-cart {
+    background-color: var(--secondary-color);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.btn-close-cart:hover {
+    background-color: #5a6268;
+}
+
+/*
+    Media Queries para Responsividade
+*/
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .products-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .shopping-cart-container {
+        width: 100%;
+    }
+}

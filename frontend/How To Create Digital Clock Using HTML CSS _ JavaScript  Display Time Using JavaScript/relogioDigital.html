@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Create Digital Clock Using HTML CSS & JavaScript Display Time Using JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+            <div class="date-display">
+                <span id="date">00/</span>
+                <span id="month">00/</span>
+                <span id="year">0000</span>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- 
+Melhorias:
+
+Usei uma tag <main> para envolver o conteúdo principal do relógio.
+    
+A classe date-display é mais descritiva do que Date.
+
+Dividi a data em id="date", id="month", e id="year" para um controle mais preciso via JavaScript. No seu código
+original, a barra / estava dentro do <span>, o que dificultava o controle. No código CSS anterior, eu alterei o HTML
+e o CSS, mas no seu código, eles estavam no script. -->

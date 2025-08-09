@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator in HTML CSS & JavaScript | QR Code Generator in JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <div class="wrapper">
+        <header>
+            <h1>QR Code Generator</h1>
+            <p>Paste a url or enter text to create QR code.</p>
+        </header>
+        <div class="form">
+            <input type="text" placeholder="Enter text or url">
+            <button id="generateBtn">Generator QR Code</button>
+            <button id="ReadQRBtn">Ler QR Code</button>
+        </div>
+        <div class="qr-code">
+            <img src="" alt="Entre com um QR Code">
+        </div>
+    </div>
+
+    <div class="wrapperReader">
+        <form action="#">
+            <input type="file" name="#" id="fileInput" hidden>
+            <img src="/img/Exemplo qrcode para o site.jpeg" alt="qr-code">
+            <div class="content">
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+                <p>Upload QR Code to Scan</p>
+            </div>
+        </form>
+        <div class="details">
+            <textarea disabled name="#" id="mensagemQRCode" cols="30" rows="10">This is a simple qrcode reader app made with html css and javascript.</textarea>
+            <div class="buttons">
+            <button class="close">Close</button>
+            <button class="copy">Copy Text</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <script>
+
+        // Create QR Code code
+        const wrapper = document.querySelector('.wrapper'),
+        generateBtn = document.querySelector('#generateBtn'),
+
+        ReadQRBtn = document.querySelector('#ReadQRBtn');
+        container = document.querySelector(".container");
+
+        qrInput = document.querySelector('.form input'),
+        qrImg = document.querySelector('.qr-code img');
+
+        generateBtn.addEventListener("click", () => {
+            
+            let qrValue = qrInput.value; //getting a QR code of user entered value using the qrserver.
+
+            if(!qrValue) return; //if the input is empty then return from here
+            // console.log(qrValue); teste
+
+            generateBtn.textContent = "Generating RQ Code...";
+
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrValue}`;
+            //api and passing the api returned img src to qrImg varible 
+
+            qrImg.addEventListener("load", () => { //once QR code img loaded
+                wrapper.classList.add("active"); //show QR Code
+                generateBtn.textContent = "Generator QR Code";
+            });
+            
+        });
+
+        qrInput.addEventListener("keyup", () => {
+            if(qrInput.value) {
+                wrapper.classList.remove("active");
+            }
+        });
+
+        ReadQRBtn.addEventListener("click", () => {
+            container.classList.toggle("moveToReadQrCode");
+        });
+
+        // Reader QR CODE Code
+        const wrapperReader = document.querySelector(".wrapperReader"),
+        form = wrapperReader.querySelector("form"),
+        fileInput = form.querySelector("#fileInput"),
+        infoText = form.querySelector("p"),
+        copyBtn = wrapperReader.querySelector(".copy"),
+        closeBtn = wrapperReader.querySelector(".close");
+
+
+        function fetchRequest(formData, file){
+
+            infoText.textContent = "Scanning QR Code...";
+
+            fetch("http://api.qrserver.com/v1/read-qr-code/", {
+                method: "POST", body: formData
+            }).then(response => response.json()).then(result => {
+
+                result = result[0].symbol[0].data;
+
+                infoText.textContent = result ? "Upload QR Code to Scan" : "Couldn't Scan QR Code";
+
+                if(!result) return;
+
+                form.querySelector("img").src = URL.createObjectURL(file);
+
+                wrapperReader.querySelector("textarea").textContent = result;
+               
+                wrapperReader.classList.add("activeReader");
+                // console.log(result);
+            }).catch(() => {
+                infoText.textContent = "Couldn't Scan QR Code";
+            });
+        }
+
+        fileInput.addEventListener("change", e => {
+            let file = e.target.files[0]; //getting user selected file
+            if(!file) return; //retornar se estiver vazio o file input
+
+            // console.log(file); teste
+
+            let formData = new FormData();//createing a new FormData object
+            formData.append("file", file);// adding selected file to formData object
+            
+            fetchRequest(formData, file); // Enviando o arquivo para ser requisitado na API Fetch
+        });
+
+        copyBtn.addEventListener("click", () => {
+            let text = wrapperReader.querySelector("textarea").textContent;
+            navigator.clipboard.writeText(text); //Copiar texto na área de texto que descreve o QR Code
+        });
+
+        form.addEventListener("click", () => fileInput.click());
+
+        closeBtn.addEventListener("click", () => wrapperReader.classList.remove("active")); // fechar a tela de leitura do QR Code
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
