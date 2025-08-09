@@ -12,7 +12,7 @@ console.log("Servidor rodando!!!");
 // Configuração do CORS para permitir requisições do seu frontend
 app.use(
   cors({
-    origin: "https://meu-portfolio-html-css-javascript-com.onrender.com/", // URL do seu servidor de desenvolvimento
+    origin: "https://meu-portfolio-html-css-javascript-com.onrender.com", // URL do seu servidor de desenvolvimento
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
